@@ -95,8 +95,10 @@
             <div class="body-text">As of writing, Demesne features two resources, Ducats/Gold and Food. Both the player and AI are effected by the economy, which is required to expand. The economy changes each turn.In code the economy is a struct that contains TMaps for every value required for the economy to function. The reason for the TMaps is so we can assign a PlayerID to each values so we could modify a specific value for a specific player in random events (unfortunately cut for time). The economy file also comes with a large amount of helper files, allowing developers of other mechanics to easily modify a specific players balance (i.e removing a lump sum and increasing upkeep). In order for the economy to function in game, it is required that the EconomyManager and TurnManager are present in the scene. When the Turn Manager sends a "end-turn" signal to the economy then all of the upkeep and income values are used to generate a Revenue value which is added to the balance. From the GameMode file, the starting balances and AI Modifier can be set. This can make the economy easier or harder for the AI(by default the AI gets 1.25X more income than the player)  </div>
             <div class="body-text">The TurnManager is very simple, once the End Turn button is pressed TurnManager broadcasts a multicast delegate notifying everything subscribed that the player has ended their turn. It also switches a StateMachine to say it is the AIs turn for a small amount of time, before reverting it back to the Players turn State. </div>
         </div>
-    </div>    
-
+    </div>
+        <a class="button" href="https://github.com/Dumbledalfadore/Demesne">
+            <span class="button-text">GitHub Link</span>
+        </a>
       <!-- IMAGE GALLERY -->
         
       <div id="project-gallery">
